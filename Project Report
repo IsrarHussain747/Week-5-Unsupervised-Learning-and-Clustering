@@ -1,0 +1,77 @@
+Project Report: K-Means Clustering and PCA on Synthetic Dataset
+
+1. Introduction
+
+This project applies unsupervised learning techniques, specifically K-Means clustering and Principal Component Analysis (PCA), to analyze a synthetic dataset. The objectives include performing K-Means clustering, identifying the optimal number of clusters using the Elbow Method, and reducing dimensionality using PCA for better visualization.
+
+2. Dataset Overview
+
+The dataset used for this project is synthetic_dataset.csv, which contains two primary features:
+
+Feature 1: Numeric attribute representing the first dimension of the dataset.
+
+Feature 2: Numeric attribute representing the second dimension of the dataset.
+
+3. Methodology
+
+Step 1: Data Loading and Exploration
+
+Imported required libraries: pandas, matplotlib.pyplot, sklearn.cluster, and sklearn.decomposition.
+
+Loaded the dataset using pd.read_csv().
+
+Previewed the dataset using df.head() to understand its structure.
+
+Step 2: K-Means Clustering
+
+Selected the relevant features for clustering: Feature 1 and Feature 2.
+
+Applied K-Means clustering with 3 clusters and a random_state of 42 for reproducibility.
+
+Assigned the predicted cluster labels to a new column named Cluster in the DataFrame.
+
+K-Means Clustering Visualization
+
+Visualized the clustering results using a scatter plot.
+
+Displayed cluster centroids in red (marked as 'X').
+
+Findings:
+
+Data points were grouped into 3 distinct clusters.
+
+The centroids accurately represent the center of each cluster.
+
+Step 3: Elbow Method for Optimal K
+
+Calculated inertia (sum of squared distances of samples to their closest cluster center) for K = 1 to 10.
+
+Plotted the inertia values against the number of clusters to create an Elbow Plot.
+
+Findings:
+
+The Elbow Plot showed a significant bend around K = 3, confirming that 3 clusters is an optimal choice.
+
+Step 4: Principal Component Analysis (PCA)
+
+Applied PCA to reduce the dataset from 2 dimensions to 2 principal components.
+
+Visualized the dataset in the PCA-transformed space using a scatter plot with clusters color-coded.
+
+Findings:
+
+PCA effectively preserved the structure of the dataset.
+
+Clusters remained visually distinguishable after dimensionality reduction.
+
+4. Results and Interpretation
+
+K-Means Clustering: Successfully segmented the dataset into 3 meaningful clusters.
+
+Optimal Cluster Identification: The Elbow Method confirmed K = 3 as the optimal number of clusters.
+
+Dimensionality Reduction: PCA allowed effective visualization in a lower-dimensional space while maintaining clear cluster separation.
+
+5. Conclusion
+
+This project demonstrated the application of K-Means clustering and PCA for exploratory analysis of a synthetic dataset. The clustering successfully identified distinct groups, and PCA provided an intuitive visualization. These techniques can be extended to more complex datasets for enhanced insights
